@@ -16,7 +16,7 @@ echo "COPY  sample_app.py /home/myapp/" >> tempdir01/Dockerfile01
 echo "EXPOSE 5050" >> tempdir01/Dockerfile01
 echo "CMD python /home/myapp/sample_app.py" >> tempdir01/Dockerfile01
 
-cd tempdir
+cd tempdir01
 docker build -t sampleapp01 .
 docker run -t -d -p 5050:5050 --name samplerunning01 sampleapp01
 docker ps -a 
